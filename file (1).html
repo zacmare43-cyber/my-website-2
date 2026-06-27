@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FIRST Fruits & Vegetables</title>
+  <meta name="description" content="Fresh quality, affordable every day. Fruit and vegetable specials from FIRST Fruits & Vegetables." />
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@400;600&display=swap)" rel="stylesheet">
+  <style>
+    :root{
+      --green:#1e7a3a;
+      --dark:#0f4d25;
+      --gold:#f2b705;
+      --light:#f7fff9;
+      --accent:#e63946;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#1b1b1b;
+      background:linear-gradient(180deg,#f0fff4,#ffffff 160px);
+    }
+    header{
+      background:linear-gradient(135deg,var(--green),var(--dark));
+      color:#fff;
+      padding:22px 16px;
+      position:sticky; top:0; z-index:10;
+      box-shadow:0 4px 14px rgba(0,0,0,.15);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+    .brand{
+      display:flex;align-items:center;gap:14px;flex-wrap:wrap
+    }
+    .brand h1{
+      margin:0;font-family:Montserrat, sans-serif;font-weight:800;letter-spacing:.5px
+    }
+    .tag{font-size:.98rem;opacity:.9}
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center;padding:22px 0
+    }
+    .badge{
+      background:#fff;color:var(--dark);border-left:6px solid var(--gold);
+      padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.07)
+    }
+    .cta{
+      display:flex;gap:12px;flex-wrap:wrap;margin-top:12px
+    }
+    .cta a{
+      text-decoration:none;color:#fff;background:var(--accent);padding:10px 14px;border-radius:8px;font-weight:600
+    }
+    .grid{
+      display:grid;gap:18px;margin:26px 0;
+      grid-template-columns:repeat(12,1fr)
+    }
+    .card{
+      background:#fff;border-radius:14px;padding:16px;box-shadow:0 8px 20px rgba(0,0,0,.06)
+    }
+    .fruit{grid-column:span 6}
+    .veg{grid-column:span 6}
+    .special{grid-column:span 12;display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,#fff, #f6fff7)}
+    h2{
+      margin:6px 0 10px;font-family:Montserrat, sans-serif;color:var(--dark)
+    }
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px 8px;border-bottom:1px solid #eef3ee;text-align:left}
+    th{font-weight:700;color:var(--green)}
+    .price{color:#c81e1e;font-weight:700;white-space:nowrap}
+    .pill{background:var(--green);color:#fff;padding:6px 10px;border-radius:999px;font-weight:700}
+    .verse{
+      background:#fff;border-radius:12px;padding:14px;margin-top:10px;border-left:5px solid var(--green);
+      box-shadow:0 6px 18px rgba(0,0,0,.06)
+    }
+    footer{
+      padding:28px 16px;background:#0b3a1c;color:#e8ffef;margin-top:30px
+    }
+    .footgrid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+    .contact a{color:#e8ffef;text-decoration:none;font-weight:700}
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .mini{background:#0e5b2c;color:#eafff1;border:1px solid #0a3f1f;padding:6px 10px;border-radius:999px;font-size:.9rem}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .fruit,.veg{grid-column:span 12}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div style="font-size:44px;line-height:1">🥬🍎</div>
+        <div>
+          <h1>FIRST Fruits & Vegetables</h1>
+          <div class="tag">Fresh quality, affordable every day</div>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="badge">
+          <div id="daily-verse" class="verse">
+            <strong>Daily Verse</strong>
+            <div id="verse-text" style="margin-top:6px"></div>
+            <div id="verse-ref" style="margin-top:4px;color:#0e5b2c;font-weight:600"></div>
+          </div>
+          <div class="badge-row">
+            <span class="mini">Fresh Produce</span>
+            <span class="mini">Great Prices</span>
+            <span class="mini">Friendly Service</span>
+          </div>
+          <div class="cta">
+            <a href="tel:+27695719161">Call Lee: 069 571 9161</a>
+            <a href="tel:+27683022433">Call Jes: 068 302 2433</a>
+            <a href="#specials" style="background:#1e7a3a">View Specials</a>
+          </div>
+        </div>
+        <div class="badge">
+          <span class="pill">SPECIAL OFFER</span>
+          <h2 style="margin-top:12px">10kg Potatoes (S/M)</h2>
+          <div style="font-size:2.2rem;color:#b00020;font-weight:800">Only R50</div>
+          <div style="margin-top:6px;color:#2c2c2c">Limited while stocks last.</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="specials">
+    <div class="grid">
+      <section class="card fruit">
+        <h2>Fruit Specials</h2>
+        <table aria-label="Fruit specials">
+          <thead>
+            <tr><th>Item</th><th>Price</th><th>Unit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Apples</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Bananas</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Pears</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Naartjies</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Oranges</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Limes</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Avocados</td><td class="price">R10 / R20</td><td>Packs</td></tr>
+            <tr><td>Pineapples</td><td class="price">R12</td><td>Each</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card veg">
+        <h2>Vegetable Specials</h2>
+        <table aria-label="Vegetable specials">
+          <thead>
+            <tr><th>Item</th><th>Price</th><th>Unit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Potatoes</td><td class="price">R15</td><td>per kg</td></tr>
+            <tr><td>Onions</td><td class="price">R20</td><td>per kg</td></tr>
+            <tr><td>Baby Butternut</td><td class="price">R12</td><td>per kg</td></tr>
+            <tr><td>Madumbe</td><td class="price">R32</td><td>per kg</td></tr>
+            <tr><td>Cucumber</td><td class="price">R17</td><td>each</td></tr>
+            <tr><td>Green Pepper</td><td class="price">R14</td><td>2's</td></tr>
+            <tr><td>Lettuce</td><td class="price">R20</td><td>each</td></tr>
+            <tr><td>Cauli-broc</td><td class="price">R25</td><td>each</td></tr>
+            <tr><td>Broccoli</td><td class="price">R25</td><td>each</td></tr>
+            <tr><td>Baby Spinach</td><td class="price">R18</td><td>each</td></tr>
+            <tr><td>Garlic</td><td class="price">R30</td><td>per 200g</td></tr>
+            <tr><td>Ginger</td><td class="price">R30</td><td>per 200g</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card special">
+        <div style="font-size:48px">🥔</div>
+        <div>
+          <h2>10kg Potatoes — Only R50</h2>
+          <div>Small/Medium size. While stocks last.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <h3 style="margin:0 0 8px">Order Now</h3>
+        <div class="contact">
+          <div>WhatsApp/Call Lee: <a href="tel:+27695719161">069 571 9161</a></div>
+          <div>WhatsApp/Call Jes: <a href="tel:+27683022433">068 302 2433</a></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 8px">Hours & Notes</h3>
+        <div>Fresh arrivals daily. Prices subject to change and availability.</div>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:14px;opacity:.85">Thank you for supporting local — God bless you!</div>
+  </footer>
+
+  <script>
+    // Rotating Bible verse — changes daily by date index (local time).
+    // No network calls; edit or extend the list as you wish.
+    const verses = [
+      {t:"But seek first the kingdom of God and his righteousness, and all these things will be added to you.", r:"Matthew 6:33"},
+      {t:"The Lord is my shepherd; I shall not want.", r:"Psalm 23:1"},
+      {t:"I can do all things through Him who strengthens me.", r:"Philippians 4:13"},
+      {t:"Trust in the Lord with all your heart, and do not lean on your own understanding.", r:"Proverbs 3:5"},
+      {t:"For God so loved the world that he gave his only Son...", r:"John 3:16"},
+      {t:"Let all that you do be done in love.", r:"1 Corinthians 16:14"},
+      {t:"Be strong and courageous... for the Lord your God is with you wherever you go.", r:"Joshua 1:9"},
+      {t:"The steadfast love of the Lord never ceases; his mercies never come to an end.", r:"Lamentations 3:22"},
+      {t:"The Lord is good to all, and his mercy is over all that he has made.", r:"Psalm 145:9"},
+      {t:"Do not be anxious about anything... with thanksgiving let your requests be made known to God.", r:"Philippians 4:6"},
+      {t:"Cast all your anxiety on him because he cares for you.", r:"1 Peter 5:7"},
+      {t:"In all your ways acknowledge him, and he will make straight your paths.", r:"Proverbs 3:6"},
+      {t:"The joy of the Lord is your strength.", r:"Nehemiah 8:10"},
+      {t:"The Lord is my light and my salvation; whom shall I fear?", r:"Psalm 27:1"},
+      {t:"Blessed are the peacemakers, for they shall be called sons of God.", r:"Matthew 5:9"},
+      {t:"This is the day that the Lord has made; let us rejoice and be glad in it.", r:"Psalm 118:24"},
+      {t:"My grace is sufficient for you, for my power is made perfect in weakness.", r:"2 Corinthians 12:9"},
+      {t:"He has told you, O man, what is good... to do justice, love kindness, and walk humbly with your God.", r:"Micah 6:8"},
+      {t:"Your word is a lamp to my feet and a light to my path.", r:"Psalm 119:105"},
+      {t:"The Lord will fight for you; you need only to be still.", r:"Exodus 14:14"},
+      {t:"Taste and see that the Lord is good; blessed is the one who takes refuge in him.", r:"Psalm 34:8"},
+      {t:"Come to me, all who labor and are heavy laden, and I will give you rest.", r:"Matthew 11:28"},
+      {t:"If God is for us, who can be against us?", r:"Romans 8:31"},
+      {t:"We love because he first loved us.", r:"1 John 4:19"},
+      {t:"The Lord is near to all who call on him, to all who call on him in truth.", r:"Psalm 145:18"},
+      {t:"Lord, you keep him in perfect peace whose mind is stayed on you.", r:"Isaiah 26:3"},
+      {t:"A cheerful heart is good medicine.", r:"Proverbs 17:22"},
+      {t:"Be still, and know that I am God.", r:"Psalm 46:10"},
+      {t:"Let everything that has breath praise the Lord.", r:"Psalm 150:6"},
+      {t:"The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control.", r:"Galatians 5:22–23"}
+    ];
+    function showVerse(){
+      const today = new Date();
+      const idx = today.getFullYear()*372 + (today.getMonth()+1)*31 + today.getDate(); // stable varying index
+      const v = verses[idx % verses.length];
+      document.getElementById('verse-text').textContent = v.t;
+      document.getElementById('verse-ref').textContent = v.r;
+      // Accessible labels
+      document.getElementById('daily-verse').setAttribute('aria-label', `Daily verse: ${v.t} — ${v.r}`);
+    }
+    showVerse();
+  </script>
+</body>
+</html>
